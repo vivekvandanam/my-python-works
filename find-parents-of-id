@@ -1,0 +1,21 @@
+tree_data = [
+    {'id' : 1, 'parent' : 0},
+    {'id' : 2, 'parent' : 0},
+    {'id' : 3, 'parent' : 0},
+    {'id' : 4, 'parent' : 1},
+    {'id' : 5, 'parent' : 4},
+    {'id' : 6, 'parent' : 5}
+]
+
+def findParent(id):
+    for data in tree_data:
+        if (data['id'] == id):
+            if (data['parent'] != 0):
+                parent1.append(data['parent'])
+            findParent(data['parent'])
+while (True):         
+    parent1 = []
+    id = input("Enter the id : ")
+    findParent(int(id))
+    print("parents : ")
+    print(parent1)
