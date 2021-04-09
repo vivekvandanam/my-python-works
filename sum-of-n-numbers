@@ -1,0 +1,18 @@
+while True:
+    limit = input("Enter the limit : ")
+    try:
+        x = int(limit)
+        total = 0
+    except ValueError:
+        print("Enter an integer")
+        continue
+    while x>0:
+        total=total+x
+        x=x-1
+    print("sum of first n numbers : ",total)
+    choice = input("Do you want next? Enter YES/NO : ")
+    if choice.lower() == "yes":
+        continue
+    else:
+        print("You entered no")
+        break
